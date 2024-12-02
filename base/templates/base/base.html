@@ -1,0 +1,66 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% tailwind_css %}
+		<style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      color: white;
+      
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+
+      background-color: rgba(0, 0, 0, 1);
+	  text-align: center;
+    }
+
+		</style>
+		{% block custom_css %}{% endblock %}
+		<title>{% block title %}Cricket Analysis Software{% endblock %}</title>
+	</head>
+	<body>
+		<div class="navbar bg-primary text-base-100 fixed">
+			<div class="navbar-start">
+				<a href="/" class="btn btn-ghost text-xl">
+					<!-- <img src="{% static 'img/logo_rm.png' %}" alt="Shuttle Smart Vision" width="50px"> -->
+					<span class="hidden lg:inline">Cricket Analysis Software</span>
+				</a>
+			</div>
+			<div class="navbar-end">
+				<a href="{% url 'about' %}" class="mx-2">About</a>
+				<a href="{% url 'about' %}" class="mx-2">Demo</a>
+
+			</div>
+		</div>
+		{% if messages %}
+		<div class="toast toast-end">
+			<ul class="messages max-w-xs text-wrap break-normal">
+				{% for message in messages %}
+				<li class="max-w-xs text-wrap break-normal"> <div class="alert alert-{{ message.tags }} max-w-xs text-wrap break-normal"><span>{{ message }}</span></div></li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% endif %}
+		<div class="p-0">
+			{% block content %}
+			{% endblock %}
+		</div>
+
+
+		<script>
+			setTimeout(function() {
+				document.querySelector('.toast').style.display = 'none';
+			}, 3000);
+		</script>
+		{% block custom_js %}{% endblock %}
+
+	</body>
+</html>

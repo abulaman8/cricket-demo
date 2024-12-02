@@ -1,0 +1,147 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load static tailwind_tags %}
+{% block custom_css %}
+<style>
+.content-container{
+	<!-- scroll-snap-type: y mandatory; -->
+	overflow-y: scroll;
+	height: 100vh;
+}
+
+    .content {
+	    scroll-snap-align: start;
+	    margin: 0;
+	    padding: 0;
+	    height: 100vh; /* Full viewport height */
+	    background-image: url("{% static 'img/bg.jpeg' %}");
+	    background-size: cover;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-color: rgba(0, 0, 0, 0.8);
+	    background-blend-mode: overlay;
+    }
+
+</style>
+{% endblock %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<!-- <div class="content-container"> -->
+	<div class="content flex flex-col justify-center items-left p-16 text-left">
+		<!-- <img src="{% static 'img/logo_rm.png' %}" alt="Shuttle Smart Vision" width="350px"> -->
+		<div class="flex flex-col py-4 ml-32">
+			<h2 class="text-6xl font-bold my-4">Cricket Analysis <br> Software</h2>
+			<hr class="w-[285px] bg-primary h-[8px]">
+			<h3 class="text-xl">Comprehensive data & video analysis solutions to capture, analyze,
+				<br>
+				plan, and share every aspect of team & player performance.</h3>
+		</div>
+		<a href="#analysis1" class="btn btn-secondary mt-4 ml-32 max-w-[200px]">
+			Get Started
+		</a>
+
+	</div>
+	<div class="content flex flex-col justify-center items-left p-16 text-left">
+		<!-- <img src="{% static 'img/logo_rm.png' %}" alt="Shuttle Smart Vision" width="350px"> -->
+		<div class="flex flex-col py-4 ml-32 max-w-[50%]">
+			<h2 class="text-4xl font-bold my-4">Cricket Analysis <br> Performance Tool</h2>
+			<hr class="w-[285px] bg-primary h-[8px]">
+			<p class="text-xl py-2">
+			Pushing the boundaries of performance monitoring, Catapult’s fast bowling algorithm is specifically designed to measure the loads being placed on your seamers in training and games.
+			</p>
+			<h3 class="text-3xl font-bold">
+				Designed for Cricket
+			</h3>
+			<p class="py-2">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maxime dolore, velit, nam sed illum repellat molestias obcaecati vero nobis alias ea molestiae laudantium optio!
+
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quibusdam possimus quis autem ipsam minima explicabo nesciunt repellendus ab, ad assumenda magnam reiciendis ex. Aperiam.
+			</p>
+			<h3 class="text-3xl font-bold">
+				Designed for Cricket
+			</h3>
+			<p class="py-2">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maxime dolore, velit, nam sed illum repellat molestias obcaecati vero nobis alias ea molestiae laudantium optio!
+
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quibusdam possimus quis autem ipsam minima explicabo nesciunt repellendus ab, ad assumenda magnam reiciendis ex. Aperiam.
+			</p>
+		</div>
+
+	</div>
+	<div class="content flex flex-wrap justify-center items-center p-16 text-left" id="analysis1">
+		<div class="flex">	
+			<video class="video-js" controls preload="auto" style="width: 450px; background-color: transparent">
+				<source src="{% static "vid/output_video.mp4" %}" type="video/mp4">
+				<p class="vjs-no-js">
+				To view this video please enable JavaScript, and consider upgrading to a
+				web browser that
+				<a href="https://videojs.com/html5-video-support/" target="_blank">
+					supports HTML5 video
+				</a>
+				</p>
+			</video>
+		</div>
+		<div class="flex flex-col justify-around py-4 ml-16 max-w-[50%] mt-[75px]">
+			<h2 class="text-4xl font-bold my-2">Ball Trajectory <br> Analysis</h2>
+			<hr class="w-[185px] bg-primary h-[8px] my-2">
+			<h3 class="text-2xl">Lorem, ipsum dolor.</h3>
+			<p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			Velit necessitatibus earum alias, odit nisi voluptatibus libero ipsum cupiditate qui magni, sint.
+
+			Iusto obcaecati sit quisquam enim? Cumque voluptas dolorem,
+			eligendi voluptatum quia ea autem obcaecati explicabo similique.
+			Omnis vel mollitia animi et natus modi, voluptas tempore 
+			incidunt rem veritatis architecto itaque commodi nobis deleniti.</p>
+			<p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			Beatae doloribus possimus est nam quas, optio maxime consectetur eos mollitia,
+			repudiandae numquam eveniet. Dolores, facere quibusdam alias quisquam praesentium id excepturi 
+			nam magnam dolor quod cumque commodi blanditiis voluptatum debitis fugiat consequatur veniam r
+			eiciendis! Inventore quo recusandae iste adipisci labore, nihil quas,
+			totam nemo eligendi maiores consequuntur reiciendis unde cum molestias facere commodi atque,
+			maxime sit nam.</p>
+
+		</div>
+
+
+	</div>
+		<div class="content flex flex-wrap justify-center items-center p-16 text-left">
+		<div class="flex my-auto">	
+			<video class="video-js" controls preload="auto" style="width: 450px; background-color: transparent">
+				<source src="{% static "vid/yt_output.mp4" %}" type="video/mp4">
+				<p class="vjs-no-js">
+				To view this video please enable JavaScript, and consider upgrading to a
+				web browser that
+				<a href="https://videojs.com/html5-video-support/" target="_blank">
+					supports HTML5 video
+				</a>
+				</p>
+			</video>
+		</div>
+		<div class="flex flex-col justify-around py-4 ml-16 max-w-[50%] mt-[75px]">
+			<h2 class="text-4xl font-bold my-2">Speed Analysis</h2>
+			<hr class="w-[185px] bg-primary h-[8px] my-2">
+			<h3 class="text-2xl">Lorem, ipsum dolor.</h3>
+			<p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			Velit necessitatibus earum alias, odit nisi voluptatibus libero ipsum cupiditate qui magni, sint.
+
+			Iusto obcaecati sit quisquam enim? Cumque voluptas dolorem,
+			eligendi voluptatum quia ea autem obcaecati explicabo similique.
+			Omnis vel mollitia animi et natus modi, voluptas tempore 
+			incidunt rem veritatis architecto itaque commodi nobis deleniti.</p>
+			<p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			Beatae doloribus possimus est nam quas, optio maxime consectetur eos mollitia,
+			repudiandae numquam eveniet. Dolores, facere quibusdam alias quisquam praesentium id excepturi 
+			nam magnam dolor quod cumque commodi blanditiis voluptatum debitis fugiat consequatur veniam r
+			maxime sit nam.</p>
+
+		</div>
+
+
+	</div>
+
+<!-- </div> -->
+{% endblock %}
+
+{% block custom_js %}
+<!-- <script src="https://vjs.zencdn.net/8.0.4/video.js"></script> -->
+{% endblock %}
