@@ -3,141 +3,193 @@
 {% load static tailwind_tags %}
 {% block custom_css %}
 <style>
-.content-container{
-	<!-- scroll-snap-type: y mandatory; -->
-	overflow-y: scroll;
-	height: 100vh;
+.content-container {
+	< !-- scroll-snap-type: y mandatory;
+	-->overflow-y: scroll;
+height: 100vh;
 }
 
-    .content {
-	    scroll-snap-align: start;
-	    margin: 0;
-	    padding: 0;
-	    height: 100vh; /* Full viewport height */
-	    background-image: url("{% static 'img/bg.jpeg' %}");
-	    background-size: cover;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-color: rgba(0, 0, 0, 0.8);
-	    background-blend-mode: overlay;
-    }
-
+	.content {
+		scroll-snap-align: start;
+		margin: 0;
+		padding: 0;
+		height: 100vh;
+		/* Full viewport height */
+		background-image: url("{% static 'img/bg.jpeg' %}");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: rgba(0, 0, 0, 0.8);
+		background-blend-mode: overlay;
+	}
 </style>
 {% endblock %}
 {% block title %} Home {% endblock %}
 {% block content %}
 <!-- <div class="content-container"> -->
-	<div class="content flex flex-col justify-center items-left p-16 text-left">
-		<!-- <img src="{% static 'img/logo_rm.png' %}" alt="Shuttle Smart Vision" width="350px"> -->
-		<div class="flex flex-col py-4 ml-32">
-			<h2 class="text-6xl font-bold my-4">Cricket Analysis <br> Software</h2>
-			<hr class="w-[285px] bg-primary h-[8px]">
-			<h3 class="text-xl">Comprehensive data & video analysis solutions to capture, analyze,
-				<br>
-				plan, and share every aspect of team & player performance.</h3>
-		</div>
-		<a href="#analysis1" class="btn btn-secondary mt-4 ml-32 max-w-[200px]">
-			Get Started
-		</a>
-
+<div class="content flex flex-col justify-center items-left p-16 text-left">
+	<!-- <img src="{% static 'img/logo_rm.png' %}" alt="Shuttle Smart Vision" width="350px"> -->
+	<div class="flex flex-col py-4 ml-32">
+		<h2 class="text-6xl font-bold my-4">Cricket Insights </h2>
+		<hr class="w-[285px] bg-primary h-[8px]">
+		<h3 class="text-xl">
+			Comprehensive solutions for data and video analysis to capture, analyze, strategize, and deliver insights
+			into every aspect of team,<br> player, and ball performance.</h3>
 	</div>
-	<div class="content flex flex-col justify-center items-left p-16 text-left">
-		<!-- <img src="{% static 'img/logo_rm.png' %}" alt="Shuttle Smart Vision" width="350px"> -->
-		<div class="flex flex-col py-4 ml-32 max-w-[50%]">
-			<h2 class="text-4xl font-bold my-4">Cricket Analysis <br> Performance Tool</h2>
-			<hr class="w-[285px] bg-primary h-[8px]">
-			<p class="text-xl py-2">
-			Pushing the boundaries of performance monitoring, Catapult’s fast bowling algorithm is specifically designed to measure the loads being placed on your seamers in training and games.
+	<a href="#analysis1" class="btn btn-secondary mt-4 ml-32 max-w-[200px]">
+		Get Started
+	</a>
+
+</div>
+<div class="content flex flex-col justify-center items-left p-16 text-left">
+	<!-- <img src="{% static 'img/logo_rm.png' %}" alt="Shuttle Smart Vision" width="350px"> -->
+	<div class="flex flex-col py-4 ml-32 max-w-[50%]">
+		<h2 class="text-4xl font-bold my-4">Cricket Performance Analysis Tool</h2>
+		<hr class="w-[285px] bg-primary h-[8px]">
+		<p class="text-xl py-2">
+		Our fast bowling algorithm monitors loads on seamers during training and matches, providing real-time
+		insights into bowling speed, swing, and accuracy.
+		</p><br>
+		<h3 class="text-3xl font-bold">
+			Tailored for Cricket
+		</h3>
+		<p class="py-2">
+		We track ball movement, player dynamics, and team strategies through advanced video and data analysis,<br>
+		delivering precise metrics and actionable insights to enhance performance.
+
+
+		</p><br>
+		<h3 class="text-3xl font-bold">
+			Comprehensive Performance Insights
+		</h3>
+		<p class="py-2">
+		Our platform integrates data and video to analyze every aspect of the game—from player movements to ball
+		dynamics—helping optimize strategies and improve outcomes.
+		</p>
+	</div>
+
+</div>
+<div class="content flex flex-wrap justify-center items-center p-16 text-left" id="analysis1">
+	<div class="flex">
+		<video class="z-10" controls preload="auto" style="width: 475px;">
+			<source src="{% static "vid/output_video.mp4" %}" type="video/mp4">
+			<p class="vjs-no-js">
+			To view this video please enable JavaScript, and consider upgrading to a
+			web browser that
+			<a href="https://videojs.com/html5-video-support/" target="_blank">
+				supports HTML5 video
+			</a>
 			</p>
-			<h3 class="text-3xl font-bold">
-				Designed for Cricket
-			</h3>
-			<p class="py-2">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maxime dolore, velit, nam sed illum repellat molestias obcaecati vero nobis alias ea molestiae laudantium optio!
+		</video>
+	</div>
+	<div class="flex flex-col justify-around py-4 ml-16 max-w-[50%]">
+		<h2 class="text-4xl font-bold mb-4">Ball Trajectory <br> Analysis</h2>
+		<hr class="w-[185px] bg-primary h-[8px] my-4">
+		<p class="mt-4">
+		Unlock the full potential of every delivery with our advanced Ball Trajectory Analysis tool. Track key
+		metrics such as ball speed, swing, spin, and bounce to gain valuable insights into bowler performance and
+		pitch conditions. Visualize the ball’s journey from release to impact, empowering bowlers to refine their
+		strategies and helping batsmen predict movement. Optimize your performance with precise, data-driven
+		insights that give you a competitive edge.</p>
+		<p class="my-2">
+		Our system also offers a deep dive into the dynamics of the game, providing actionable data to enhance
+		training, match preparation, and in-game decision-making. Understand every aspect of the ball’s behavior to
+		elevate your strategy and performance on the field.</p>
 
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quibusdam possimus quis autem ipsam minima explicabo nesciunt repellendus ab, ad assumenda magnam reiciendis ex. Aperiam.
+	</div>
+
+
+</div>
+<div class="content flex flex-wrap justify-around items-center p-2 text-left">
+
+	<div class="flex my-auto">
+		<video class="z-10" controls preload="auto" style="width: 450px;">
+			<source src="{% static "vid/yt_output.mp4" %}" type="video/mp4">
+			<p class="vjs-no-js">
+			To view this video please enable JavaScript, and consider upgrading to a
+			web browser that
+			<a href="https://videojs.com/html5-video-support/" target="_blank">
+				supports HTML5 video
+			</a>
 			</p>
-			<h3 class="text-3xl font-bold">
-				Designed for Cricket
-			</h3>
-			<p class="py-2">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maxime dolore, velit, nam sed illum repellat molestias obcaecati vero nobis alias ea molestiae laudantium optio!
+		</video>
+	</div>
+	<div class="flex flex-col justify-around ml-2 max-w-[50%]">
+		<h2 class="text-4xl font-bold mb-4">Speed Analysis</h2>
+		<hr class="w-[185px] bg-primary h-[8px] my-2">
+		<h3 class="text-2xl my-4">Enhancing the game</h3>
+		<p class="my-4">Speed is a key aspect of performance, and our analysis provides precise insights into the
+		average ball speed. This data helps players and coaches refine strategies and improve gameplay. Perfect for
+		understanding trends and optimizing performance, our technology lays the foundation for advanced sports
+		analytics.</p>
 
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quibusdam possimus quis autem ipsam minima explicabo nesciunt repellendus ab, ad assumenda magnam reiciendis ex. Aperiam.
+	</div>
+</div>
+<div class="content flex flex-wrap justify-around items-center p-2 text-left">
+	<div class="flex flex-col justify-around items-center max-w-[50%]">
+		<img src="{% static "img/f1.jpeg" %}" width="400px" class="my-2">
+		<img src="{% static "img/f2.jpeg" %}" width="400px" class="my-2">
+	</div>
+	<div class="flex flex-col justify-around ml-2 max-w-[50%]">
+		<h2 class="text-4xl font-bold my-2">Bowler Biomechanics Analysis</h2>
+		<hr class="w-[185px] bg-primary h-[8px]">
+		<h3 class="text-2xl"></h3>
+		<p class="my-2">Unlock the next level of performance enhancement with our advanced Bowler Biomechanics
+		Analysis
+		tool. This system provides precise measurements of key biomechanical parameters, including:
+		Knee Angle: Critical for evaluating lower body stability and power generation.
+		Elbow Angle: Essential for maintaining bowling legality and optimizing arm action.
+		Stride Length: Key for analyzing momentum transfer and delivery efficiency.
+
+		.</p>
+		<p class="my-2">This visual captures real-time insights, overlaying biomechanical data on the bowler's image
+		to provide
+		actionable feedback. Coaches and players can use this tool to refine technique, prevent injuries, and
+		maximize performance during training and matches.
+		Empower your team with data-driven insights to push boundaries and gain a competitive edge in the game.
+		</p>
+
+	</div>
+</div>
+<div class="content flex flex-wrap justify-center items-center p-16 text-left">
+	<div class="flex my-auto">
+		<video class="z-10" controls preload="auto" style="width: 300px;">
+			<source src="{% static "vid/pv23.mp4" %}" type="video/mp4">
+			<p class="vjs-no-js">
+			To view this video please enable JavaScript, and consider upgrading to a
+			web browser that
+			<a href="https://videojs.com/html5-video-support/" target="_blank">
+				supports HTML5 video
+			</a>
 			</p>
-		</div>
+		</video>
+	</div>
+	<div class="flex flex-col justify-around py-4 ml-16 max-w-[50%]">
+		<h2 class="text-4xl font-bold my-2">Ball Pitch Zone Analysis
+		</h2>
+		<hr class="w-[185px] bg-primary h-[8px] my-2">
+		<h3 class="text-2xl"></h3>
+		<p class="my-2">URevolutionize training sessions with our Ball Pitch Zone Analysis tool. This innovative
+		system tracks the trajectory and landing zone of each delivery, classifying it into precise
+		categories like:
+		Over-Pitched
+		Full-Length
+		Good-Length
+		Short-Pitched
+
+		.</p>
+		<p class="my-2">TWith real-time visual overlays and time-lapse metrics, this tool provides actionable
+		insights into a bowler’s accuracy and pitch strategy. Coaches and players can fine-tune their game
+		plans by understanding ball placement and its impact on batsmen.
+		Optimize performance, improve targeting precision, and gain a competitive edge with data-driven
+		decision-making tailored for cricket enthusiasts and professionals alike.
+		</p>
 
 	</div>
-	<div class="content flex flex-wrap justify-center items-center p-16 text-left" id="analysis1">
-		<div class="flex">	
-			<video class="video-js" controls preload="auto" style="width: 450px; background-color: transparent">
-				<source src="{% static "vid/output_video.mp4" %}" type="video/mp4">
-				<p class="vjs-no-js">
-				To view this video please enable JavaScript, and consider upgrading to a
-				web browser that
-				<a href="https://videojs.com/html5-video-support/" target="_blank">
-					supports HTML5 video
-				</a>
-				</p>
-			</video>
-		</div>
-		<div class="flex flex-col justify-around py-4 ml-16 max-w-[50%] mt-[75px]">
-			<h2 class="text-4xl font-bold my-2">Ball Trajectory <br> Analysis</h2>
-			<hr class="w-[185px] bg-primary h-[8px] my-2">
-			<h3 class="text-2xl">Lorem, ipsum dolor.</h3>
-			<p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-			Velit necessitatibus earum alias, odit nisi voluptatibus libero ipsum cupiditate qui magni, sint.
-
-			Iusto obcaecati sit quisquam enim? Cumque voluptas dolorem,
-			eligendi voluptatum quia ea autem obcaecati explicabo similique.
-			Omnis vel mollitia animi et natus modi, voluptas tempore 
-			incidunt rem veritatis architecto itaque commodi nobis deleniti.</p>
-			<p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-			Beatae doloribus possimus est nam quas, optio maxime consectetur eos mollitia,
-			repudiandae numquam eveniet. Dolores, facere quibusdam alias quisquam praesentium id excepturi 
-			nam magnam dolor quod cumque commodi blanditiis voluptatum debitis fugiat consequatur veniam r
-			eiciendis! Inventore quo recusandae iste adipisci labore, nihil quas,
-			totam nemo eligendi maiores consequuntur reiciendis unde cum molestias facere commodi atque,
-			maxime sit nam.</p>
-
-		</div>
 
 
-	</div>
-		<div class="content flex flex-wrap justify-center items-center p-16 text-left">
-		<div class="flex my-auto">	
-			<video class="video-js" controls preload="auto" style="width: 450px; background-color: transparent">
-				<source src="{% static "vid/yt_output.mp4" %}" type="video/mp4">
-				<p class="vjs-no-js">
-				To view this video please enable JavaScript, and consider upgrading to a
-				web browser that
-				<a href="https://videojs.com/html5-video-support/" target="_blank">
-					supports HTML5 video
-				</a>
-				</p>
-			</video>
-		</div>
-		<div class="flex flex-col justify-around py-4 ml-16 max-w-[50%] mt-[75px]">
-			<h2 class="text-4xl font-bold my-2">Speed Analysis</h2>
-			<hr class="w-[185px] bg-primary h-[8px] my-2">
-			<h3 class="text-2xl">Lorem, ipsum dolor.</h3>
-			<p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-			Velit necessitatibus earum alias, odit nisi voluptatibus libero ipsum cupiditate qui magni, sint.
 
-			Iusto obcaecati sit quisquam enim? Cumque voluptas dolorem,
-			eligendi voluptatum quia ea autem obcaecati explicabo similique.
-			Omnis vel mollitia animi et natus modi, voluptas tempore 
-			incidunt rem veritatis architecto itaque commodi nobis deleniti.</p>
-			<p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-			Beatae doloribus possimus est nam quas, optio maxime consectetur eos mollitia,
-			repudiandae numquam eveniet. Dolores, facere quibusdam alias quisquam praesentium id excepturi 
-			nam magnam dolor quod cumque commodi blanditiis voluptatum debitis fugiat consequatur veniam r
-			maxime sit nam.</p>
-
-		</div>
-
-
-	</div>
+</div>
 
 <!-- </div> -->
 {% endblock %}

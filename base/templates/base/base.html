@@ -24,19 +24,19 @@
 
 		</style>
 		{% block custom_css %}{% endblock %}
-		<title>{% block title %}Cricket Analysis Software{% endblock %}</title>
+		<title>{% block title %}Cricket Analytics{% endblock %}</title>
 	</head>
 	<body>
-		<div class="navbar bg-primary text-base-100 fixed">
+		<div class="navbar bg-primary text-base-100 fixed z-50">
 			<div class="navbar-start">
 				<a href="/" class="btn btn-ghost text-xl">
 					<!-- <img src="{% static 'img/logo_rm.png' %}" alt="Shuttle Smart Vision" width="50px"> -->
-					<span class="hidden lg:inline">Cricket Analysis Software</span>
+					<span class="hidden lg:inline">IMAS-Integrated Match Analysis System</span>
 				</a>
 			</div>
 			<div class="navbar-end">
-				<a href="{% url 'about' %}" class="mx-2">About</a>
-				<a href="{% url 'about' %}" class="mx-2">Demo</a>
+				<a href="{% url 'dashboard' %}" class="mx-2">About</a>
+				<a href="{% url 'dashboard' %}" class="mx-2">Demo</a>
 
 			</div>
 		</div>
