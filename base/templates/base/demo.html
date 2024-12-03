@@ -1,0 +1,66 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load static tailwind_tags %}
+{% block custom_css %}
+<style>
+.content-container {
+	< !-- scroll-snap-type: y mandatory;
+	-->overflow-y: scroll;
+height: 100vh;
+}
+
+	.content {
+		scroll-snap-align: start;
+		margin: 0;
+		padding: 0;
+		height: 100vh;
+		/* Full viewport height */
+		background-image: url("{% static 'img/bg.jpeg' %}");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: rgba(0, 0, 0, 0.8);
+		background-blend-mode: overlay;
+	}
+</style>
+{% endblock %}
+{% block title %} Demo {% endblock %}
+{% block content %}
+<!-- <div class="content-container"> -->
+<div class="content flex flex-col justify-center items-center p-16 text-center">
+	<!-- <img src="{% static 'img/logo_rm.png' %}" alt="Shuttle Smart Vision" width="350px"> -->
+	<h2 class="text-4xl font-bold my-4">Request a Demo</h2>
+	<div class="flex flex-col py-2 mx-auto max-w-[50%]">
+		<form action="{% url 'demo' %}" class="flex flex-col gap-4 text-black min-w-[90%]" method="POST">
+			{% csrf_token %}
+			<label class="input flex items-center min-w-[90%]">
+				Name
+				<input type="text" class="grow" placeholder="John Doe" name="name" />
+			</label>
+			<label class="input flex items-center min-w-[90%]">
+				Email
+				<input type="text" class="grow" placeholder="john.doe@site.com" name="email" />
+			</label>
+			<label class="input flex items-center min-w-[90%]">
+				Phone
+				<input type="text" class="grow" placeholder="1234567890" name="phone" />
+			</label>
+
+			<input
+					type="file"
+					class="file-input file-input-bordered file-input-secondary w-full max-w-sm" 
+					name="file" />
+			<button class="btn btn-outline btn-secondary" type="submit">Submit</button>
+		</form>
+	</div>
+
+</div>
+
+</div>
+
+<!-- </div> -->
+{% endblock %}
+
+{% block custom_js %}
+<!-- <script src="https://vjs.zencdn.net/8.0.4/video.js"></script> -->
+{% endblock %}
