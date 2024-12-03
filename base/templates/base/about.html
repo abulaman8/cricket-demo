@@ -3,11 +3,11 @@
 {% load static tailwind_tags %}
 {% block custom_css %}
 <style>
-	.content-container {
-		< !-- scroll-snap-type: y mandatory;
-		-->overflow-y: scroll;
-		height: 100vh;
-	}
+.content-container {
+	< !-- scroll-snap-type: y mandatory;
+	-->overflow-y: scroll;
+height: 100vh;
+}
 
 	.content {
 		scroll-snap-align: start;
@@ -15,38 +15,46 @@
 		padding: 0;
 		height: 100vh;
 		/* Full viewport height */
-		background-image: url("{% static 'img/bg.jpeg' %}");
+		<!-- background-image: url("{% static 'img/bg.jpeg' %}"); -->
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-color: rgba(0, 0, 0, 0.8);
+		background-color: rgba(0, 0, 0, 1);
 		background-blend-mode: overlay;
 	}
 </style>
 {% endblock %}
-{% block title %} Dashboard {% endblock %}
+{% block title %} About {% endblock %}
 {% block content %}
 <!-- <div class="content-container"> -->
-<div class="content flex flex-col justify-center items-left p-16 text-left">
-	<!-- <img src="{% static 'img/logo_rm.png' %}" alt="Shuttle Smart Vision" width="350px"> -->
-	<div class="flex flex-col py-4 ml-32">
-		<h2 class="text-6xl font-bold my-4">Cricket Analytics<br> </h2>
-		<hr class="w-[285px] bg-primary h-[8px]">
-		<h3 class="text-xl">
-			Comprehensive solutions for data and video analysis to capture, evaluate, strategize, and share insights
-			into every aspect of team and player performance, including detailed ball dynamics.</h3>
+<div class="content flex flex-col justify-center items-center p-16 text-center">
+	<h1 class="text-3xl font-bold">Deliver professional-grade analytics to cricketers everywhere.
+	</h1>
+	<div class="flex flex-wrap justify-center items-center text-left mt-8">
+
+		<div class="flex">
+			<img src="https://picsum.photos/475/400" alt="">
+		</div>
+		<div class="flex flex-col justify-around py-4 ml-16 max-w-[50%]">
+			<h2 class="text-xl font-bold">Every name has a story</h2>
+			<hr class="w-[185px] bg-primary h-[8px] my-2">
+			<p class="my-2">
+			The name IMAS is an acronym, but its deeper meaning lies in the values it represents: Insight, Mastery, Analytics, and Strategy.
+			</p>
+			<ul>
+				<li>✨ <b>Insight</b> – Shedding light on every aspect of the game, from player performance to pitch conditions.</li>
+				<li>🎯 <b>Mastery</b> –  Empowering players and coaches to refine their skills with data-driven learning.</li>
+				<li>📊 <b>Analytics</b> – Transforming raw data into actionable insights that drive performance improvement.</li>
+				<li>🏏 <b>Strategy</b> - Enabling smarter decisions on and off the field for a competitive edge.</li>
+			</ul>
+			<p class="mt-4">
+			The essence of IMAS is to revolutionize cricket by integrating cutting-edge technology with a passion for excellence.
+			It reflects our mission to provide a seamless, data-rich experience, transforming how the game is analyzed, taught, and played.</p>
+
+		</div>
 	</div>
-	<a href="#analysis1" class="btn btn-secondary mt-4 ml-32 max-w-[200px]">
-		Get Started
-	</a>
+
 
 </div>
 
-</div>
-
-<!-- </div> -->
-{% endblock %}
-
-{% block custom_js %}
-<!-- <script src="https://vjs.zencdn.net/8.0.4/video.js"></script> -->
 {% endblock %}
