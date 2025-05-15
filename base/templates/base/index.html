@@ -15,7 +15,7 @@ height: 100vh;
 		padding: 0;
 		height: 100vh;
 		/* Full viewport height */
-		background-image: url("{% static 'img/bg.jpeg' %}");
+		background-image: url("{% static 'img/tbg.jpeg' %}");
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -30,11 +30,11 @@ height: 100vh;
 <div class="content flex flex-col justify-center items-left p-16 text-left">
 	<!-- <img src="{% static 'img/logo_rm.png' %}" alt="Shuttle Smart Vision" width="350px"> -->
 	<div class="flex flex-col py-4 ml-32">
-		<h2 class="text-6xl font-bold my-4">Cricket Insights </h2>
+		<h2 class="text-6xl font-bold my-4">Tennis Insights </h2>
 		<hr class="w-[285px] bg-primary h-[8px]">
 		<h3 class="text-xl">
-			Comprehensive solutions for data and video analysis to capture, analyze, strategize, and deliver insights
-			into every aspect of team,<br> player, and ball performance.</h3>
+			Advanced analytics for tennis performance, capturing and analyzing every shot, movement, and strategy
+            to elevate your game.</h3>
 	</div>
 	<a href="#analysis1" class="btn btn-secondary mt-4 ml-32 max-w-[200px]">
 		Get Started
@@ -44,18 +44,18 @@ height: 100vh;
 <div class="content flex flex-col justify-center items-left p-16 text-left">
 	<!-- <img src="{% static 'img/logo_rm.png' %}" alt="Shuttle Smart Vision" width="350px"> -->
 	<div class="flex flex-col py-4 ml-32 max-w-[50%]">
-		<h2 class="text-4xl font-bold my-4">Cricket Performance Analysis Tool</h2>
+		<h2 class="text-4xl font-bold my-4">Tennis Performance Analysis Tool</h2>
 		<hr class="w-[285px] bg-primary h-[8px]">
 		<p class="text-xl py-2">
-		Our fast bowling algorithm monitors loads on seamers during training and matches, providing real-time
-		insights into bowling speed, swing, and accuracy.
+            Our cutting-edge system tracks every aspect of your tennis game, providing real-time insights into
+            ball trajectory, player movements, and shot placement.
 		</p><br>
 		<h3 class="text-3xl font-bold">
-			Tailored for Cricket
+			Tailored for Tennis
 		</h3>
 		<p class="py-2">
-		We track ball movement, player dynamics, and team strategies through advanced video and data analysis,<br>
-		delivering precise metrics and actionable insights to enhance performance.
+		    We analyze ball tracking, player keypoints, and net clearances, delivering precise metrics to refine
+            your technique and outsmart opponents.
 
 
 		</p><br>
@@ -63,16 +63,16 @@ height: 100vh;
 			Comprehensive Performance Insights
 		</h3>
 		<p class="py-2">
-		Our platform integrates data and video to analyze every aspect of the game—from player movements to ball
-		dynamics—helping optimize strategies and improve outcomes.
+            Integrating video and data, our platform offers actionable insights into every serve, rally, and
+            movement, optimizing your performance on the court.
 		</p>
 	</div>
 
 </div>
-<div class="content flex flex-wrap justify-center items-center p-16 text-left" id="analysis1">
+<div class="content flex flex-wrap justify-center items-center p-10 text-left" id="analysis1">
 	<div class="flex">
-		<video class="z-10" controls preload="auto" style="width: 475px;">
-			<source src="{% static "vid/output_video.mp4" %}" type="video/mp4">
+		<video class="z-10" controls preload="auto" style="width: 575px;">
+			<source src="{% static "vid/clip0480.mp4" %}" type="video/mp4">
 			<p class="vjs-no-js">
 			To view this video please enable JavaScript, and consider upgrading to a
 			web browser that
@@ -83,18 +83,15 @@ height: 100vh;
 		</video>
 	</div>
 	<div class="flex flex-col justify-around py-4 ml-16 max-w-[50%]">
-		<h2 class="text-4xl font-bold mb-4">Ball Trajectory <br> Analysis</h2>
+		<h2 class="text-4xl font-bold mb-4">Ball Trajectory and Bounce Analysis</h2>
 		<hr class="w-[185px] bg-primary h-[8px] my-4">
 		<p class="mt-4">
-		Unlock the full potential of every delivery with our advanced Ball Trajectory Analysis tool. Track key
-		metrics such as ball speed, swing, spin, and bounce to gain valuable insights into bowler performance and
-		pitch conditions. Visualize the ball’s journey from release to impact, empowering bowlers to refine their
-		strategies and helping batsmen predict movement. Optimize your performance with precise, data-driven
-		insights that give you a competitive edge.</p>
+            Track every shot with our Ball Trajectory and Bounce Analysis tool. Monitor metrics like speed, spin,
+            and bounce points (p1bb, p2bb), visualized with a red rectangle around the ball in each frame. Understand
+            shot dynamics from contact (p1cp, p2cp) to bounce.</p>
 		<p class="my-2">
-		Our system also offers a deep dive into the dynamics of the game, providing actionable data to enhance
-		training, match preparation, and in-game decision-making. Understand every aspect of the ball’s behavior to
-		elevate your strategy and performance on the field.</p>
+            Gain insights into net clearances (p1nc, p2nc) and optimize your strategy with data-driven feedback,
+            enhancing your performance and anticipation on the court.</p>
 
 	</div>
 
@@ -103,8 +100,8 @@ height: 100vh;
 <div class="content flex flex-wrap justify-around items-center p-2 text-left">
 
 	<div class="flex my-auto">
-		<video class="z-10" controls preload="auto" style="width: 450px;">
-			<source src="{% static "vid/yt_output.mp4" %}" type="video/mp4">
+		<video class="z-10" controls preload="auto" style="width: 600px;">
+			<source src="{% static "vid/output_with_data480.mp4" %}" type="video/mp4">
 			<p class="vjs-no-js">
 			To view this video please enable JavaScript, and consider upgrading to a
 			web browser that
@@ -117,32 +114,31 @@ height: 100vh;
 	<div class="flex flex-col justify-around ml-2 max-w-[50%]">
 		<h2 class="text-4xl font-bold mb-4">Speed Analysis</h2>
 		<hr class="w-[185px] bg-primary h-[8px] my-2">
-		<h3 class="text-2xl my-4">Enhancing the game</h3>
-		<p class="my-4">Speed is a key aspect of performance, and our analysis provides precise insights into the
-		average ball speed. This data helps players and coaches refine strategies and improve gameplay. Perfect for
-		understanding trends and optimizing performance, our technology lays the foundation for advanced sports
-		analytics.</p>
+		<h3 class="text-2xl my-4">Power and Precision</h3>
+		<p class="my-4">Measure the velocity of every shot with our Speed Analysis tool. From powerful serves to rally shots,
+            track ball speed with a red bounding box following the ball in every frame, helping you refine your
+            tactics and training.</p>
 
 	</div>
 </div>
 <div class="content flex flex-wrap justify-around items-center p-2 text-left">
-	<div class="flex flex-col justify-around items-center max-w-[50%]">
-		<img src="{% static "img/f1.jpeg" %}" width="400px" class="my-2">
-		<img src="{% static "img/f2.jpeg" %}" width="400px" class="my-2">
+	<div class="flex flex-col justify-around items-center max-w-[10%]">
+		<img src="{% static "img/frame19.jpg" %}" width="500px" class="my-2">
+		<img src="{% static "img/frame37.jpg" %}" width="500px" class="my-2">
 	</div>
 	<div class="flex flex-col justify-around ml-2 max-w-[50%]">
-		<h2 class="text-4xl font-bold my-2">Bowler Biomechanics Analysis</h2>
+		<h2 class="text-4xl font-bold my-2">Player Biomechanics Analysis</h2>
 		<hr class="w-[185px] bg-primary h-[8px]">
 		<h3 class="text-2xl">Unlock the next level of performance enhancement</h3>
 		<p class="my-2">
-		The system provides precise measurements of key biomechanical parameters, including:
+		 Analyze player movements with keypoint detection, tracking joints like elbows and knees. Bounding boxes
+         highlight players and the ball, with contact points (p1cp, p2cp) measured for precision.
 		</p>
 		<ul class="my-4 list-disc ml-8">
-			<li><b>Knee Angle: </b> Critical for evaluating lower body stability and power generation.</li>
-			<li><b>Elbow Angle: </b> Essential for maintaining bowling legality and optimizing arm action.</li>
-			<li><b>Stride Length: </b> Key for analyzing momentum transfer and delivery efficiency.</li>
-		</ul>
-
+            <li><b>Joint Angles: </b> Optimize stroke mechanics.</li>
+            <li><b>Footwork: </b> Enhance court coverage.</li>
+            <li><b>Racket Position: </b> Improve shot execution.</li>
+        </ul>
 		<p class="my-2">This visual captures real-time insights, overlaying biomechanical data on the bowler's image
 		to provide
 		actionable feedback. Coaches and players can use this tool to refine technique, prevent injuries, and
@@ -154,8 +150,14 @@ height: 100vh;
 </div>
 <div class="content flex flex-wrap justify-center items-center p-16 text-left">
 	<div class="flex my-auto">
-		<video class="z-10" controls preload="auto" style="width: 300px;">
+	<div class="flex flex-col justify-around items-center max-w-[10%]">
+		
+		<img src="{% static "img/2d_spatial_points.png" %}" width="600px" class="my-2">
+	</div>
+		<!--<video class="z-10" controls preload="auto" style="width: 300px;">
 			<source src="{% static "vid/pv23.mp4" %}" type="video/mp4">
+			
+			
 			<p class="vjs-no-js">
 			To view this video please enable JavaScript, and consider upgrading to a
 			web browser that
@@ -163,30 +165,24 @@ height: 100vh;
 				supports HTML5 video
 			</a>
 			</p>
-		</video>
+		</video>-->
 	</div>
 	<div class="flex flex-col justify-around py-4 ml-16 max-w-[50%]">
-		<h2 class="text-4xl font-bold my-2">Ball Pitch Zone Analysis
+		<h2 class="text-4xl font-bold my-2">3D Court Grid Mapping
 		</h2>
 		<hr class="w-[185px] bg-primary h-[8px] my-2">
 		<h3 class="text-2xl"></h3>
-		<p class="my-2">Revolutionize training sessions with our Ball Pitch Zone Analysis tool. This innovative
-		system tracks the trajectory and landing zone of each delivery, classifying it into precise
-		categories like:
+		<p class="my-2"> Our advanced 3D Court Grid Mapping overlays a detailed grid across the entire tennis court up to the net level, enabling precise spatial analysis of every play. This grid facilitates accurate tracking of ball trajectories, bounce points (p1bb, p2bb), contact points (p1cp, p2cp), and net clearances (p1nc, p2nc), providing a comprehensive view of the game dynamics.
 		</p>
-		<ul class="my-4 list-disc ml-8">
-			<li>Over-Pitched</li>
-			<li>Full-Length</li>
-			<li>Good-Length</li>
+		<!--<ul class="my-4 list-disc ml-8">
+			<li>Service Box</li>
+			<li>Baseline</li>
+			<li>Net Area</li>
 			<li>Short-Pitched</li>
-		</ul>
+		</ul>-->
 
 		
-		<p class="my-2">With real-time visual overlays and time-lapse metrics, this tool provides actionable
-		insights into a bowler’s accuracy and pitch strategy. Coaches and players can fine-tune their game
-		plans by understanding ball placement and its impact on batsmen.
-		Optimize performance, improve targeting precision, and gain a competitive edge with data-driven
-		decision-making tailored for cricket enthusiasts and professionals alike.
+		<p class="my-2"> Combined with player keypoint detection and bounding boxes, the grid helps analyze movements and shot placements with unparalleled precision. Whether you're studying a serve's trajectory, a rally's intensity, or a player's court coverage, this visualization empowers coaches and players with actionable insights to elevate performance and strategy.
 		</p>
 
 	</div>

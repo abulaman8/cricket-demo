@@ -3,39 +3,87 @@
 {% load static tailwind_tags %}
 {% block custom_css %}
 <style>
-.content-container {
-	< !-- scroll-snap-type: y mandatory;
-	-->overflow-y: scroll;
-height: 100vh;
-}
+	.content-container {
+		<!-- scroll-snap-type: y mandatory;
+		-->overflow-y: scroll;
+	height: 300vh;
+	}
 
 	.content {
 		scroll-snap-align: start;
 		margin: 0;
 		padding: 0;
-		height: 100vh;
+		height: 300vh;
 		/* Full viewport height */
-		<!-- background-image: url("{% static 'img/bg.jpeg' %}"); -->
+		<!-- background-image: url("{% static 'img/flow1.png' %}"); -->
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-color: rgba(0, 0, 0, 1);
 		background-blend-mode: overlay;
 	}
+	
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: #60a5fa; /* Tailwind's blue-400 */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdown-button:hover {
+    background-color: #2563eb; /* Tailwind's blue-600 */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1f2937; /* Tailwind's gray-800 */
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: #d1d5db; /* Tailwind's gray-300 */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #374151; /* Tailwind's gray-700 */
+    color: #ffffff00; /* Tailwind's white */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 </style>
 {% endblock %}
 {% block title %} About {% endblock %}
 {% block content %}
 <!-- <div class="content-container"> -->
 <div class="content flex flex-col justify-center items-center p-16 text-center">
-	<h1 class="text-3xl font-bold">Deliver professional-grade analytics to cricketers everywhere.
+	<h1 class="text-3xl font-bold">Deliver professional-grade analytics to tennis players everywhere.
 	</h1>
 	<div class="flex flex-wrap justify-center items-center text-left mt-8">
 
 		<div class="flex">
-			<img src="{% static 'img/bg.jpeg' %}" alt="" width="475px">
+			<img src="{% static 'img/flow1.png' %}" alt="" width="800px">
 		</div>
-		<div class="flex flex-col justify-around py-4 ml-16 max-w-[50%]">
+		<div class="flex flex-col justify-around py-4 ml-16 max-w-[10%]">
 			<h2 class="text-xl font-bold">Every name has a story</h2>
 			<hr class="w-[185px] bg-primary h-[8px] my-2">
 			<p class="my-2">
@@ -48,12 +96,40 @@ height: 100vh;
 				<li>🏏 <b>Strategy</b> - Enabling smarter decisions on and off the field for a competitive edge.</li>
 			</ul>
 			<p class="mt-4">
-			The essence of IMAS is to revolutionize cricket by integrating cutting-edge technology with a passion for excellence.
+			The essence of IMAS is to revolutionize tennis by integrating cutting-edge technology with a passion for excellence.
 			It reflects our mission to provide a seamless, data-rich experience, transforming how the game is analyzed, taught, and played.</p>
 
 		</div>
 	</div>
+<!-- Image Dropdown Section -->
+    <div class="mt-8">
+        <h3 class="text-lg font-semibold text-white mb-4">Select an Image to View</h3>
+        <div class="dropdown">
+            <button class="dropdown-button">Images</button>
+            <div class="dropdown-content">
+                <a href="{% static 'saved_images/frame19.jpg' %}" target="_blank">frame19.jpg</a>
+                <a href="{% static 'saved_images/frame19.jpg' %}" target="_blank">frame19.jpg</a>
+                <a href="{% static 'saved_images/frame37.jpg' %}" target="_blank">frame37.jpg</a>
+                <a href="{% static 'saved_images/frame47.jpg' %}" target="_blank">frame47.jpg</a>
+                <a href="{% static 'saved_images/frame63.jpg' %}" target="_blank">frame63.jpg</a>
+                <a href="{% static 'saved_images/frame79.jpg' %}" target="_blank">frame79.jpg</a>
+                <a href="{% static 'saved_images/frame89.jpg' %}" target="_blank">frame89.jpg</a>
+                <a href="{% static 'saved_images/frame102.jpg' %}" target="_blank">frame102.jpg</a>
+                <a href="{% static 'saved_images/frame119.jpg' %}" target="_blank">frame119.jpg</a>
+                <a href="{% static 'saved_images/frame129.jpg' %}" target="_blank">frame129.jpg</a>
+                <a href="{% static 'saved_images/frame144.jpg' %}" target="_blank">frame144.jpg</a>
+                <a href="{% static 'saved_images/frame160.jpg' %}" target="_blank">frame160.jpg</a>
+                <a href="{% static 'saved_images/frame171.jpg' %}" target="_blank">frame171.jpg</a>
+                <a href="{% static 'saved_images/frame184.jpg' %}" target="_blank">frame184.jpg</a>
+                <a href="{% static 'saved_images/frame246.jpg' %}" target="_blank">frame246.jpg</a>
+                <a href="{% static 'saved_images/frame256.jpg' %}" target="_blank">frame256.jpg</a>
+                <a href="{% static 'saved_images/frame277.jpg' %}" target="_blank">frame277.jpg</a>
 
+
+            </div>
+        </div>
+    </div>
+</div>
 
 </div>
 
